@@ -75,7 +75,7 @@ void draw() {
     if (life == 0) {
       gameState = GAME_LOSE;
     } else {
-      //delay(1000);
+      delay(1000);
       frogX=frogInitX;
       frogY=frogInitY;
       gameState = GAME_RUN;
