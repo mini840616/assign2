@@ -6,7 +6,7 @@ float rightCar1X, rightCar1Y, rightCar1W, rightCar1H;//car3
 float rightCar2X, rightCar2Y, rightCar2W, rightCar2H;//car4
 float pondY;
 
-float speedfrog = 5;
+float speedfrog = 4;
 float speed1, speed2, speed3, speed4;
 float speedMax = 10.0;
 float speedMin = 1.0;
