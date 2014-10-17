@@ -6,12 +6,13 @@ float rightCar1X, rightCar1Y, rightCar1W, rightCar1H;//car3
 float rightCar2X, rightCar2Y, rightCar2W, rightCar2H;//car4
 float pondY;
 
-float speedfrog = 4;
+float speedfrog = 3;
 float speed1, speed2, speed3, speed4;
 float speedMax = 10.0;
 float speedMin = 1.0;
 
 int life;
+int currentTime = 0;
 
 final int GAME_START = 1;
 final int GAME_WIN = 2;
@@ -74,8 +75,7 @@ void draw() {
 
     if (life == 0) {
       gameState = GAME_LOSE;
-    } else {
-      delay(1000);
+    } else if(millis()-currentTime >= 1000){
       frogX=frogInitX;
       frogY=frogInitY;
       gameState = GAME_RUN;
