@@ -72,13 +72,14 @@ void draw() {
     text("Press Enter", width/3, height/2);    
     break;
   case FROG_DIE:
-
-    if (life == 0) {
-      gameState = GAME_LOSE;
-    } else if(millis()-currentTime >= 1000){
-      frogX=frogInitX;
-      frogY=frogInitY;
-      gameState = GAME_RUN;
+    if (millis()-currentTime >= 1000) {
+      if (life == 0) {
+        gameState = GAME_LOSE;
+      } else {
+        frogX=frogInitX;
+        frogY=frogInitY;
+        gameState = GAME_RUN;
+      }
     }
     break;
   case GAME_RUN:
@@ -165,12 +166,12 @@ void draw() {
       life--;
       gameState = FROG_DIE;
     }
-    
+
     //reach pond test
-    if(frogCY < pondY + frogH/2 ){
+    if (frogCY < pondY + frogH/2 ) {
       gameState = GAME_WIN;
     }  
-    
+
     break;
   case GAME_WIN:
     background(0);
@@ -224,13 +225,11 @@ void keyPressed() {
     life=3;
     frogX = frogInitX;
     frogY = frogInitY;
-    
-    speed1 = random(speedMin,speedMax);
-    speed2 = random(speedMin,speedMax);
-    speed3 = random(speedMin,speedMax);
-    speed4 = random(speedMin,speedMax);
-    
+
+    speed1 = random(speedMin, speedMax);
+    speed2 = random(speedMin, speedMax);
+    speed3 = random(speedMin, speedMax);
+    speed4 = random(speedMin, speedMax);
   }
 }
 
-  
