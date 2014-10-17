@@ -135,6 +135,7 @@ void draw() {
     // car1 hitTest
     if (frogCX < leftCar1X + leftCar1W && frogCX > leftCar1X &&
       frogCY < leftCar1Y + leftCar1H && frogCY > leftCar1Y) {
+      currentTime = millis();
       image(imgDeadFrog, frogX, frogY);
       life--;
       gameState = FROG_DIE;
@@ -143,6 +144,7 @@ void draw() {
     // car2 hitTest
     if (frogCX < leftCar2X + leftCar2W && frogCX > leftCar2X &&
       frogCY < leftCar2Y + leftCar2H && frogCY > leftCar2Y) {
+      currentTime = millis();
       image(imgDeadFrog, frogX, frogY);
       life--;
       gameState = FROG_DIE;
@@ -150,6 +152,7 @@ void draw() {
     // car3 hitTest
     if (frogCX < rightCar1X + rightCar1W && frogCX > rightCar1X &&
       frogCY < rightCar1Y + rightCar1H && frogCY > rightCar1Y) {
+      currentTime = millis();
       image(imgDeadFrog, frogX, frogY);
       life--;
       gameState = FROG_DIE;
@@ -157,6 +160,7 @@ void draw() {
     // car4 hitTest
     if (frogCX < rightCar2X + rightCar2W && frogCX > rightCar2X &&
       frogCY < rightCar2Y + rightCar2H && frogCY > rightCar2Y) {
+      currentTime = millis();
       image(imgDeadFrog, frogX, frogY);
       life--;
       gameState = FROG_DIE;
